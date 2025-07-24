@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ORDENA LOS TRES (3) NUMEROS </title>
+</head>
+<body>
+  <h1>📈 ORDENA LOS TRES (3️⃣) NUMEROS 🔢</h1>
+  <button onclick="ingresarNumeros()">INGRESAR NUMEROS</button>
+  <div id="resultados"></div>
+
+  <script>
+    function ingresarNumeros() {
+      let num1 = parseFloat(prompt("Ingresa el primer número:"));
+      let num2 = parseFloat(prompt("Ingresa el segundo número:"));
+      let num3 = parseFloat(prompt("Ingresa el tercer número:"));
+
+      let resultados = document.getElementById("resultados");
+      resultados.innerHTML = ""; 
+
+      if (num1 === num2 && num2 === num3) {
+        resultados.innerHTML += `<p>Los tres números son iguales 🟰 ${num1}, ${num2}, ${num3} ✔️</p>`;
+        return;
+      }
+
+      let numeros = [num1, num2, num3];
+
+      
+      let mayorAmenor = [...numeros].sort((a, b) => b - a);
+     
+      let menorAmayor = [...numeros].sort((a, b) => a - b);
+
+      resultados.innerHTML += `<p>De mayor a menor ⬆️ ⬇️ ${mayorAmenor.join(", ")} ✔️</p>`;
+      resultados.innerHTML += `<p>De menor a mayor ⬇️ ⬆️ ${menorAmayor.join(", ")} ✔️</p>`;
+    }
+  </script>
+</body>
+</html>

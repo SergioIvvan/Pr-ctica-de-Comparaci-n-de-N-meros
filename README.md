@@ -1,2 +1,2 @@
-# Pr-ctica-de-Comparaci-n-de-N-meros
+# Practica-de-Comparacion-de-Numeros
 19.3 Práctica de Comparación de Números
